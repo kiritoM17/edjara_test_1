@@ -17,11 +17,19 @@ and last_name.
 5. ouvrir votre navigateur web ( Chrome de preference )
 6. saisir l'addresse 127.0.0.1 a la barre de recherche de votre navigateur
 7. url **http://127.0.0.1:4100/file/getFemaleGenderFile** pour generer le fichier female.csv et l'url **http://127.0.0.1:4100/file/getMaleGenderFile** pour le fichier male.csv
+8. ouvrir le repertoire contenant l'application, les fichiers generer s'y trouve
 ## Manuel installation en EN
-1.clone the project
+1. clone the project
+
 2.open a terminal on the active directory of the project
+
 3.enter the npm i command to install the dependencies of Node
-4.Enter the command npm start the message: ** the server to start at the IP address 4100 ** should be displayed
+
+4.Enter the command npm start the message: **le server a demarrer a l'adresse IP 4100** should be displayed
+
 5.open your web browser (Chrome preferably)
+
 6.enter the address 127.0.0.1 in your browser's search bar
-7.url ** http: //127.0.0.1: 4100 / file / getFemaleGenderFile ** to generate the female.csv file and the url ** http: //127.0.0.1: 4100 / file / getMaleGenderFile ** for the male.csv file
+
+7.url **http://127.0.0.1:4100/file/getFemaleGenderFile** to generate the female.csv file and the url **http://127.0.0.1:4100/file getMaleGenderFile** for the male.csv file
+8. open app project folders to get generated csv files
