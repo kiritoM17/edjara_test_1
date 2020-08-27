@@ -25,5 +25,5 @@ and last_name.
 4. Enter the command npm start the message: **le server a demarrer a l'adresse IP 4100** should be displayed
 5. Open your web browser (Chrome preferably)
 6. Enter the address 127.0.0.1 in your browser's search bar
-7. Url **http://127.0.0.1:4100/file/getFemaleGenderFile** to generate the female.csv file and the url **http://127.0.0.1:4100/file getMaleGenderFile** for the male.csv file
+7. Url **http://127.0.0.1:4100/file/getFemaleGenderFile** to generate the female.csv file and the url **http://127.0.0.1:4100/file/getMaleGenderFile** for the male.csv file
 8. Open app project folders to get generated csv files
