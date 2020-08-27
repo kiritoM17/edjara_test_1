@@ -2,16 +2,16 @@ const fs = require('fs');
 let fileController = {};
 let fileName = 'MOCK_DATA.csv';
 let dataArray=[];
-fs.readFile(fileName, 'utf8', function ( data) {
+fs.readFile(fileName, 'utf8', function (err, data) {
     dataArray = data.split(/\r?\n/);
 });
 //get Male file .csv
-fileController.getMaleGenderFile=(res)=>{
+fileController.getMaleGenderFile=(req,res,next)=>{
     writeToFile("Male");
     res.send("le fichier male.csv a bien ete creer merci !");
 };
 //get Female file .csv
-fileController.getFemaleGenderFile=(res)=>{
+fileController.getFemaleGenderFile=(req,res,next)=>{
     writeToFile("Female");
     res.send("le fichier female.csv a bien ete creer merci !");
 };
@@ -26,7 +26,7 @@ function writeToFile(fileGender){
     addFullNameColumn(data).then((result)=>{
         console.log(result);
         result=result.sort((a,b)=>a.split(",")[7]-b.split(",")[7]);
-            fs.writeFile(fileGender+'.csv', result, (err) => {
+            fs.writeFile(fileGender=='Male'?'male':'female'+'.csv', result, (err) => {
                 if (err) throw err;
               });
     }).catch((err)=>{
