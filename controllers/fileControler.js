@@ -1,21 +1,21 @@
 const fs = require('fs');
-const stringify = require('csv-stringify');
 let fileController = {};
+let fileName = 'MOCK_DATA.csv';
 let dataArray=[];
-fs.readFile('MOCK_DATA.csv', 'utf8', function (err, data) {
+fs.readFile(fileName, 'utf8', function ( data) {
     dataArray = data.split(/\r?\n/);
 });
-//get Male file csv
-fileController.getMaleGenderFile=(req,res,next)=>{
+//get Male file .csv
+fileController.getMaleGenderFile=(res)=>{
     writeToFile("Male");
     res.send("le fichier male.csv a bien ete creer merci !");
 };
-//get Female file csv
-fileController.getFemaleGenderFile=(req,res,next)=>{
+//get Female file .csv
+fileController.getFemaleGenderFile=(res)=>{
     writeToFile("Female");
     res.send("le fichier female.csv a bien ete creer merci !");
 };
-//function to create new csv file
+//function to create new .csv file
 function writeToFile(fileGender){
     let data = [...dataArray];
     if(fileGender=='Male'){
@@ -33,7 +33,7 @@ function writeToFile(fileGender){
         throw err;
     });
 }
-//function add full name column
+//function add  full name column 
 async function addFullNameColumn(table_data)
 {
     let new_data=[ 'id, first_name, last_name,full_name,email,gender,ip_address,age'];
